@@ -80,7 +80,7 @@ const Navbar = () => {
                     <span className="w-12 h-8 rounded bg-white text-black flex items-center justify-center">Hecq</span>
                 </Link>
             </div>
-            <div className="hidden md:flex gap-4 w-1/3">
+            <div className="hidden md:flex flex-row-reverse gap-4 w-1/3">
                 <Link href="https://github.com/AdrienHq">
                     <Image src="/github.png" alt="Github Image" width={24} height={24}/>
                 </Link>
@@ -95,7 +95,8 @@ const Navbar = () => {
                 </Link>
             </div>
             <div className="md:hidden">
-                <button className="w-10 h-8 flex flex-col justify-between z-50 relative" onClick={(()=>setOpen(!open))}>
+                <button className="w-10 h-8 flex flex-col justify-between z-50 relative"
+                        onClick={(() => setOpen(!open))}>
                     <motion.div
                         variants={topVariants}
                         animate={open ? "opened" : "closed"}
