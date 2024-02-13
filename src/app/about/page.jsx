@@ -1,6 +1,6 @@
 "use client"
 
-import {motion, useScroll} from "framer-motion";
+import {motion, useInView, useScroll} from "framer-motion";
 import Animation from "@/components/animation";
 import {useRef} from "react";
 
@@ -9,18 +9,21 @@ const AboutPage = () => {
     const containerRef = useRef();
     const { scrollYProgress } = useScroll({ container: containerRef });
 
+    const experienceRef = useRef();
+    const isExperienceRefInView = useInView(experienceRef, {once:true, margin:"-100px"});
+
     return (
         <motion.div className="h-full" initial={{y: "-200vh"}} animate={{y: "0%"}} transition={{duration: 1}}>
             <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
                 <div
                     className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
-                    <div className="flex flex-col gap-12 justify-center">
+                    <div className="flex flex-col gap-12 justify-center pb-48">
                         <h1 className="font-bold text-2xl">HOW AM I ?</h1>
                         <p className="text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias
                             consectetur deleniti
                             dolore eaque error esse, eum explicabo facere incidunt nemo nesciunt nisi, odit pariatur
                             placeat possimus quasi quisquam, quod rem sint suscipit temporibus voluptates!</p>
-                        <span className="italic ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, dolore?</span>
+                        <span className="italic pb-10 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, dolore?</span>
                         <motion.svg
                             initial={{opacity: 0.2, y: 0}}
                             animate={{opacity: 1, y: "10px"}}
@@ -45,9 +48,9 @@ const AboutPage = () => {
                         </motion.svg>
                     </div>
 
-                    <div className="flex flex-col gap-12 justify-center pb-48">
-                        <div className="font-bold text 2xl">EXPERIENCE</div>
-                        <div>
+                    <div className="flex flex-col gap-12 justify-center pb-48" ref={experienceRef}>
+                        <motion.h1 initial={{x:"-400px"}} animate={isExperienceRefInView ? {x:"0"} : {}} transition={{delay:0.2}} className="font-bold text-2xl">EXPERIENCE</motion.h1>
+                        <motion.div initial={{x:"-800px"}} animate={isExperienceRefInView ? {x:"0"} : {}} transition={{delay:0.5}} className="">
                             <div className="flex justify-between h-48">
                                 {/*    LEFT*/}
                                 <div className="w-1/3">
@@ -118,7 +121,7 @@ const AboutPage = () => {
                                 {/*    RIGHT*/}
                                 <div className="w-1/3"></div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
                 <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:w-1/2">
