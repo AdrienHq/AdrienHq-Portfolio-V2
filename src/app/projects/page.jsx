@@ -111,7 +111,8 @@ const ProjectsPage = () => {
                         </text>
                     </motion.svg>
                     <Link
-                        href="/contact"
+                        href="https://github.com/AdrienHq"
+                        target="_blank"
                         className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto rounded-full flex items-center justify-center"
                     >
                         <Image src="/hiResGithub.png" alt="Github Image" width={244} height={244}/>
