@@ -12,7 +12,8 @@ const Homepage = () => {
                     <div className="flex flex-col gap-8">
                         <h1 className="text-4xl md:text-6xl text-stone-950 font-bold flex">Adrien Hecq</h1>
                         <h2 className="text-2xl md:text-4xl text-stone-700 font-semibold">Back-end web developer</h2>
-                        <p className="md:text-xl font-medium text-stone-600">Crafting seamless, captivating, and user-centric digital journeys, I strive for excellence in web development,
+                        <p className="md:text-xl font-medium text-stone-600">Crafting seamless, captivating, and
+                            user-centric digital journeys, I strive for excellence in web development,
                             ensuring accessibility and engagement every step of the way.</p>
                     </div>
                     <div className="w-full flex gap-4 justify-end">
