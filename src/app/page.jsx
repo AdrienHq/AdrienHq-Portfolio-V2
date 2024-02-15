@@ -18,10 +18,10 @@ const Homepage = () => {
                     </div>
                     <div className="w-full flex gap-4 justify-end">
                         <Link href="https://github.com/AdrienHq" target="_blank" className="flex ">
-                            <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">GitHub</button>
+                            <button className="p-4 rounded-lg ring-1 ring-black bg-slate-950 text-white hover:bg-slate-800">GitHub</button>
                         </Link>
                         <Link href="/contact" className="flex ">
-                            <button className="p-4 rounded-lg ring-1 ring-black ">Contact Me</button>
+                            <button className="p-4 rounded-lg ring-1 ring-black bg-slate-950 bg-opacity-0 hover:bg-gradient-to-b from-pink-200 to-blue-200">Contact Me</button>
                         </Link>
                     </div>
                 </div>
