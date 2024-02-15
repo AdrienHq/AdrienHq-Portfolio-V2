@@ -7,10 +7,10 @@ import NavLink from "@/components/navLink";
 import {motion} from "framer-motion"
 
 const links = [
-    { url: "/", title: "Home" },
-    { url: "/about", title: "About" },
-    { url: "/projects", title: "Projects" },
-    { url: "/contact", title: "Contact" },
+    {url: "/", title: "Home"},
+    {url: "/about", title: "About"},
+    {url: "/projects", title: "Projects"},
+    {url: "/contact", title: "Contact"},
 ];
 
 const Navbar = () => {
@@ -20,9 +20,9 @@ const Navbar = () => {
         closed: {
             rotate: 0,
         },
-        opened:{
+        opened: {
             rotate: 45,
-            backgroundColor : "rgb(255,255,255)"
+            backgroundColor: "rgb(255,255,255)"
 
         }
     }
@@ -30,7 +30,7 @@ const Navbar = () => {
         closed: {
             opacity: 1,
         },
-        opened:{
+        opened: {
             opacity: 0,
         }
     }
@@ -38,19 +38,19 @@ const Navbar = () => {
         closed: {
             rotate: 0,
         },
-        opened:{
+        opened: {
             rotate: -45,
-            backgroundColor : "rgb(255,255,255)"
+            backgroundColor: "rgb(255,255,255)"
 
         }
     }
     const listVariants = {
         closed: {
-            x:"100vw"
+            x: "100vw"
         },
         opened: {
             x: 0,
-            transition :{
+            transition: {
                 when: "beforeChildren",
                 staggerChildren: 0.2,
             }
@@ -124,7 +124,9 @@ const Navbar = () => {
                     {links.map(link => (
                         <motion.div
                             variants={listItemsVariants}
-                            className="">
+                            className=""
+                            key={link.title}
+                        >
                             <Link href={link.url} key={link.title}>{link.title}</Link>
                         </motion.div>
                     ))}
