@@ -3,26 +3,31 @@
 import {motion, useInView, useScroll} from "framer-motion";
 import Animation from "@/components/animation";
 import {useRef} from "react";
+import Link from "next/link";
 
 const AboutPage = () => {
 
     const containerRef = useRef();
-    const { scrollYProgress } = useScroll({ container: containerRef });
+    const {scrollYProgress} = useScroll({container: containerRef});
 
     const experienceRef = useRef();
-    const isExperienceRefInView = useInView(experienceRef, {once:true, margin:"-100px"});
+    const isExperienceRefInView = useInView(experienceRef, {once: true, margin: "-100px"});
 
     return (
         <motion.div className="h-full" initial={{y: "-200vh"}} animate={{y: "0%"}} transition={{duration: 1}}>
             <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
-                <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
+                <div
+                    className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2.5/3 lg:pr-0 xl:w-1.1/2">
                     <div className="flex flex-col gap-12 justify-center pb-48">
-                        <h1 className="font-bold text-2xl">HOW AM I ?</h1>
-                        <p className="text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias
-                            consectetur deleniti
-                            dolore eaque error esse, eum explicabo facere incidunt nemo nesciunt nisi, odit pariatur
-                            placeat possimus quasi quisquam, quod rem sint suscipit temporibus voluptates!</p>
-                        <span className="italic pb-10 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, dolore?</span>
+                        <h1 className="text-4xl md:text-6xl text-stone-950 font-bold flex">WHO AM I ?</h1>
+                        <p className="md:text-xl font-medium text-stone-600">Passionate about technology from a young
+                            age, I transitioned from Java development to specializing in Symfony. Now, I'm focused on
+                            broadening my skills in frontend development to enhance team collaboration and pursue
+                            becoming a Full-stack developer.
+                        </p>
+                        <span className="text-stone-600 italic pb-10 ">Crafting seamless, captivating, and
+                            user-centric digital journeys, I strive for excellence in web development,
+                            ensuring accessibility and engagement every step of the way.</span>
                         <motion.svg
                             initial={{opacity: 0.2, y: 0}}
                             animate={{opacity: 1, y: "10px"}}
@@ -46,21 +51,28 @@ const AboutPage = () => {
                             ></path>
                         </motion.svg>
                     </div>
-
                     <div className="flex flex-col gap-12 justify-center pb-48" ref={experienceRef}>
-                        <motion.h1 initial={{x:"-400px"}} animate={isExperienceRefInView ? {x:"0"} : {}} transition={{delay:0.2}} className="font-bold text-2xl">EXPERIENCE</motion.h1>
-                        <motion.div initial={{x:"-800px"}} animate={isExperienceRefInView ? {x:"0"} : {}} transition={{delay:0.5}} className="">
-                            <div className="flex justify-between h-48">
+                        <motion.h1 initial={{x: "-400px"}} animate={isExperienceRefInView ? {x: "0"} : {}}
+                                   transition={{delay: 0.2}} className="font-bold text-2xl">EXPERIENCE
+                        </motion.h1>
+                        <motion.div initial={{x: "-800px"}} animate={isExperienceRefInView ? {x: "0"} : {}}
+                                    transition={{delay: 0.5}} className="">
+                            <div className="flex justify-between h-70">
                                 {/*    LEFT*/}
                                 <div className="w-1/3">
-                                    <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Back-End
+                                    <div className="bg-white p-2 font-semibold rounded-b-lg rounded-s-lg">Internship
+                                        Back-End
                                         Developper
                                     </div>
-                                    <div className="p-3 text-sm italic">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Tenetur, ut.
+                                    <div className="p-3 text-medium italic w-full">I opted for an internship at Smals, a
+                                        valuable learning experience. Assigned to test Elasticms bundles, the custom
+                                        CMS, I utilized PhpUnit extensively. This opportunity allowed me to cultivate
+                                        expertise in Symfony coding, starting from scratch and contributing effectively
+                                        to the team's objectives.
                                     </div>
-                                    <div className="p-3 text-red-400 text-sm font-semibold">2021-2022</div>
-                                    <div className="p-1 rounded bg-white text-sm font-semibold w-fit">SMALS</div>
+                                    <div className="p-3 text-red-400 text-large font-semibold">2020-2020</div>
+                                    <div className="p-1 rounded px-6 bg-white text-medium font-semibold w-fit"><Link
+                                        href="https://www.smals.be/fr" target="_blank">Smals</Link></div>
                                 </div>
                                 {/*    CENTER*/}
                                 <div className="w-1/6 flex justify-center">
@@ -74,7 +86,7 @@ const AboutPage = () => {
                                 <div className="w-1/3"></div>
                             </div>
 
-                            <div className="flex justify-between h-48">
+                            <div className="flex justify-between h-70">
                                 {/*    LEFT*/}
                                 <div className="w-1/3"></div>
                                 {/*    CENTER*/}
@@ -88,26 +100,35 @@ const AboutPage = () => {
                                 {/*    RIGHT*/}
                                 <div className="w-1/3">
                                     <div className="bg-white p-3 font-semibold rounded-b-lg rounded-e-lg">Back-End
-                                        Developper
+                                        Developper Symfony
                                     </div>
-                                    <div className="p-3 text-sm italic">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Tenetur, ut.
+                                    <div className="p-3 text-medium italic">Following my internship, Smals appointed me
+                                        as a PHP/Symfony Back-end Developer. I collaborated with numerous clients,
+                                        integrating new features into Smals' CMS. Working alongside a Front-end
+                                        developer, an Analyst, and a Webmaster, we adhered to Agile methodologies.
+                                        Git/GitHub facilitated progress tracking and ensured streamlined project
+                                        management for CMS development at Smals.
                                     </div>
-                                    <div className="p-3 text-red-400 text-sm font-semibold">2021-2022</div>
-                                    <div className="p-1 rounded bg-white text-sm font-semibold w-fit">SMALS</div>
+                                    <div className="p-3 text-red-400 text-large font-semibold">2020-2022</div>
+                                    <div className="p-1 rounded px-6 bg-white text-medium font-semibold w-fit"><Link
+                                        href="https://www.smals.be/fr" target="_blank">Smals</Link></div>
                                 </div>
                             </div>
-                            <div className="flex justify-between h-48">
+                            <div className="flex justify-between h-70">
                                 {/*    LEFT*/}
                                 <div className="w-1/3">
                                     <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Back-End
-                                        Developper
+                                        Developper Symfony
                                     </div>
-                                    <div className="p-3 text-sm italic">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Tenetur, ut.
+                                    <div className="p-3 text-medium italic">
+                                        Continuing my career, I joined the scale-up Stellar, driven by a passion for
+                                        mastering emerging technologies. Specializing in Symfony and Api Platform, I
+                                        collaborated closely with the frontend team, gaining exposure to React,
+                                        TypeScript, and Cucumber for comprehensive testing.
                                     </div>
-                                    <div className="p-3 text-red-400 text-sm font-semibold">2021-2022</div>
-                                    <div className="p-1 rounded bg-white text-sm font-semibold w-fit">SMALS</div>
+                                    <div className="p-3 text-red-400 text-large font-semibold">2022-2024</div>
+                                    <div className="p-1 rounded px-6 bg-white text-medium font-semibold w-fit"><Link
+                                        href="https://stellar.io/" target="_blank">Stellar</Link></div>
                                 </div>
                                 {/*    CENTER*/}
                                 <div className="w-1/6 flex justify-center">
