@@ -83,15 +83,13 @@ const ProjectsPage = () => {
                                     {/* Iterate over each link and render it */}
                                     <div className="w-full flex gap-8 justify-end">
                                         {item.link.map((link, index) => (
-                                            <a key={index} href={link} className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded" target="_blank" rel="noopener noreferrer">
-                                                {item.linkText[index]}
-                                            </a>
-                                            // <Link key={index} to={link} className="flex justify-end">
-                                            //     <button
-                                            //         className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
-                                            //         Demo
-                                            //     </button>
-                                            // </Link>
+                                            <Link key={index} href={link} classname="flex justify-end" target="_blank"
+                                                  rel="noopener noreferrer">
+                                                <button
+                                                    className="p-2 text-sm md:p-4 md:text-md lg:p-4 lg:text-lg bg-transparent hover:bg-blue-800 text-blue-900 font-semibold hover:text-white py-2 px-4 border border-blue-900 hover:border-transparent rounded">
+                                                    {item.linkText[index]}
+                                                </button>
+                                            </Link>
                                         ))}
                                     </div>
                                 </div>
