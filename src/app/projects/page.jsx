@@ -1,9 +1,9 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import {motion, useScroll, useTransform} from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import {useRef} from "react";
 
 const items = [
     {
@@ -11,46 +11,46 @@ const items = [
         color: "from-red-300 to-blue-300",
         title: "React Commerce",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-        img:"",
-        link: "https://lama.dev",
+        img: "",
+        link: ["https://lama.dev", "https://test.dev"],
     },
     {
         id: 2,
         color: "from-blue-300 to-violet-300",
-        title: "Next.js Medium Blog",
+        title: "TrackerHq",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-        img:"",
-        link: "https://lama.dev",
+        img: "/trackerhq.png",
+        link: ["https://lama.dev"],
     },
     {
         id: 3,
         color: "from-violet-300 to-purple-300",
         title: "Vanilla Book App",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-        img:"",
-        link: "https://lama.dev",
+        img: "",
+        link: ["https://lama.dev"],
     },
     {
         id: 4,
         color: "from-purple-300 to-red-300",
         title: "Spotify Music App",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-        img:"",
-        link: "https://lama.dev",
+        img: "",
+        link: ["https://lama.dev"],
     },
 ];
 const ProjectsPage = () => {
     const ref = useRef();
 
-    const { scrollYProgress } = useScroll({ target: ref });
+    const {scrollYProgress} = useScroll({target: ref});
     const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
 
     return (
         <motion.div
             className="h-full"
-            initial={{ y: "-200vh" }}
-            animate={{ y: "0%" }}
-            transition={{ duration: 1 }}
+            initial={{y: "-200vh"}}
+            animate={{y: "0%"}}
+            transition={{duration: 1}}
         >
             <div className="h-[600vh] relative" ref={ref}>
                 <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
@@ -76,12 +76,20 @@ const ProjectsPage = () => {
                                     <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
                                         {item.desc}
                                     </p>
-                                    <Link href={item.link} className="flex justify-end">
-                                        <button
-                                            className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">See
-                                            Demo
-                                        </button>
-                                    </Link>
+                                    {/* Iterate over each link and render it */}
+                                    <div className="w-full flex gap-8 justify-end">
+                                        {item.link.map((link, index) => (
+                                            <a key={index} href={link} className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded" target="_blank" rel="noopener noreferrer">
+                                                Link {index + 1}
+                                            </a>
+                                            // <Link key={index} to={link} className="flex justify-end">
+                                            //     <button
+                                            //         className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
+                                            //         Demo
+                                            //     </button>
+                                            // </Link>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         ))}
