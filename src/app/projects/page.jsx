@@ -13,6 +13,7 @@ const items = [
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
         img: "",
         link: ["https://lama.dev", "https://test.dev"],
+        linkText: ["Visit TrackerHq", "test"],
     },
     {
         id: 2,
@@ -21,6 +22,7 @@ const items = [
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
         img: "/trackerhq.png",
         link: ["https://lama.dev"],
+         linkText: ["Visit TrackerHq"],
     },
     {
         id: 3,
@@ -29,6 +31,7 @@ const items = [
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
         img: "",
         link: ["https://lama.dev"],
+         linkText: ["Visit TrackerHq"],
     },
     {
         id: 4,
@@ -37,6 +40,7 @@ const items = [
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
         img: "",
         link: ["https://lama.dev"],
+         linkText: ["Visit TrackerHq"],
     },
 ];
 const ProjectsPage = () => {
@@ -80,7 +84,7 @@ const ProjectsPage = () => {
                                     <div className="w-full flex gap-8 justify-end">
                                         {item.link.map((link, index) => (
                                             <a key={index} href={link} className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded" target="_blank" rel="noopener noreferrer">
-                                                Link {index + 1}
+                                                {item.linkText[index]}
                                             </a>
                                             // <Link key={index} to={link} className="flex justify-end">
                                             //     <button
