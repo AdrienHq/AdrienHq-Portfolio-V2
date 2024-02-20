@@ -9,12 +9,12 @@ const items = [
     {
         id: 1,
         color: "from-red-300 to-blue-300",
-        title: "React Commerce",
+        title: "Portfolio V1 & V2",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-        img: "",
-        link: ["https://lama.dev", "https://test.dev"],
-        linkText: ["Visit TrackerHq", "test"],
-        linkTech: ["React", "Javascript"],
+        img: "/v1.png",
+        link: ["https://v1-portfolio.adrienhecq.com/", "https://adrienhecq.com/","https://github.com/AdrienHq/AdrienHq-Portfolio-V2"],
+        linkText: ["Visit the v1", "Github v1", "Github v2" ],
+        linkTech: ["React", "Framer-motion", "Javascript", "Next.js", "Tailwind Css", "Html"],
     },
     {
         id: 2,
@@ -23,28 +23,28 @@ const items = [
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
         img: "/trackerhq.png",
         link: ["https://lama.dev"],
-        linkText: ["Visit TrackerHq"],
+        linkText: ["Github"],
         linkTech: ["React", "Javascript"],
     },
     {
         id: 3,
         color: "from-violet-300 to-purple-300",
-        title: "Vanilla Book App",
+        title: "Recipe and Cooking Website",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-        img: "",
+        img: "/recipes.png",
         link: ["https://lama.dev"],
-        linkText: ["Visit TrackerHq"],
+        linkText: ["Github"],
         linkTech: ["React", "Javascript"],
     },
     {
         id: 4,
         color: "from-purple-300 to-red-300",
-        title: "Spotify Music App",
+        title: "My Restaurant - Business Website",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-        img: "",
-        link: ["https://lama.dev"],
-        linkText: ["Visit TrackerHq"],
-        linkTech: ["React", "Javascript"],
+        img: "restaurant.png",
+        link: ["https://www.restaurant.adrienhecq.com/"],
+        linkText: ["Visit the Restaurant", "Github"],
+        linkTech: ["Html", "Css"],
     },
 ];
 const ProjectsPage = () => {
@@ -96,14 +96,14 @@ const ProjectsPage = () => {
                                     {/* Iterate over each link and render it */}
                                     <div className="w-full flex gap-8 justify-end">
                                         {item.linkText.map((link, index) => (
-                                            <Link key={index} href={link} classname="flex justify-end"
+                                            <a key={index} href={item.link[index]} classname="flex justify-end"
                                                   target="_blank"
                                                   rel="noopener noreferrer">
                                                 <button
                                                     className="p-2 text-sm md:p-4 md:text-md lg:p-4 lg:text-lg bg-transparent hover:bg-blue-800 text-blue-900 font-semibold hover:text-white py-2 px-4 border border-blue-900 hover:border-transparent rounded">
                                                     {item.linkText[index]}
                                                 </button>
-                                            </Link>
+                                            </a>
                                         ))}
                                     </div>
                                 </div>
