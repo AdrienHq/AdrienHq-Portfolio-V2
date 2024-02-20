@@ -21,7 +21,7 @@ const AboutPage = () => {
                     <div className="flex flex-col gap-12 justify-center pb-48">
                         <h1 className="text-4xl md:text-6xl text-stone-950 font-bold flex">WHO AM I ?</h1>
                         <p className="md:text-xl font-medium text-stone-600">Passionate about technology from a young
-                            age, I transitioned from Java development to specializing in Symfony. Now, I'm focused on
+                            age, I transitioned from Java development to specializing in Symfony. Now, I&apos;m focused on
                             broadening my skills in frontend development to enhance team collaboration and pursue
                             becoming a Full-stack developer.
                         </p>
@@ -68,7 +68,7 @@ const AboutPage = () => {
                                         valuable learning experience. Assigned to test Elasticms bundles, the custom
                                         CMS, I utilized PhpUnit extensively. This opportunity allowed me to cultivate
                                         expertise in Symfony coding, starting from scratch and contributing effectively
-                                        to the team's objectives.
+                                        to the team&apos;s objectives.
                                     </div>
                                     <div className="p-3 text-red-400 text-large font-semibold">2020-2020</div>
                                     <div className="p-1 rounded px-6 bg-white text-medium font-semibold w-fit"><Link
@@ -104,7 +104,7 @@ const AboutPage = () => {
                                     </div>
                                     <div className="p-3 text-medium italic">Following my internship, Smals appointed me
                                         as a PHP/Symfony Back-end Developer. I collaborated with numerous clients,
-                                        integrating new features into Smals' CMS. Working alongside a Front-end
+                                        integrating new features into Smals&apos;s CMS. Working alongside a Front-end
                                         developer, an Analyst, and a Webmaster, we adhered to Agile methodologies.
                                         Git/GitHub facilitated progress tracking and ensured streamlined project
                                         management for CMS development at Smals.
