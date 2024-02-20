@@ -87,7 +87,8 @@ const ProjectsPage = () => {
                                     {/* Iterate over each link and render it */}
                                     <ul className="flex flex-col sm:flex-row">
                                         {item.linkTech.map((link, index) => (
-                                            <li key={index} className="flex items-center rounded-full bg-blue-900 px-3 py-1 text-xs font-medium leading-5 text-white ">
+                                            <li key={index}
+                                                className="flex items-center rounded-full p-2 text-sm md:p-4 md:text-md lg:p-2 bg-indigo-400 text-white py-2 px-4 mr-2 mb-2">
                                                 {item.linkTech[index]}
                                             </li>
                                         ))}
