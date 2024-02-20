@@ -14,6 +14,7 @@ const items = [
         img: "",
         link: ["https://lama.dev", "https://test.dev"],
         linkText: ["Visit TrackerHq", "test"],
+        linkTech: ["React", "Javascript"],
     },
     {
         id: 2,
@@ -22,7 +23,8 @@ const items = [
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
         img: "/trackerhq.png",
         link: ["https://lama.dev"],
-         linkText: ["Visit TrackerHq"],
+        linkText: ["Visit TrackerHq"],
+        linkTech: ["React", "Javascript"],
     },
     {
         id: 3,
@@ -31,7 +33,8 @@ const items = [
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
         img: "",
         link: ["https://lama.dev"],
-         linkText: ["Visit TrackerHq"],
+        linkText: ["Visit TrackerHq"],
+        linkTech: ["React", "Javascript"],
     },
     {
         id: 4,
@@ -40,7 +43,8 @@ const items = [
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
         img: "",
         link: ["https://lama.dev"],
-         linkText: ["Visit TrackerHq"],
+        linkText: ["Visit TrackerHq"],
+        linkTech: ["React", "Javascript"],
     },
 ];
 const ProjectsPage = () => {
@@ -74,16 +78,25 @@ const ProjectsPage = () => {
                                         {item.title}
                                     </h1>
                                     <div
-                                        className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
+                                        className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[900px] xl:h-[420px]">
                                         <Image src={item.img} alt="" fill/>
                                     </div>
                                     <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
                                         {item.desc}
                                     </p>
                                     {/* Iterate over each link and render it */}
+                                    <ul className="flex flex-col sm:flex-row">
+                                        {item.linkTech.map((link, index) => (
+                                            <li key={index} className="flex items-center rounded-full bg-blue-900 px-3 py-1 text-xs font-medium leading-5 text-white ">
+                                                {item.linkTech[index]}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    {/* Iterate over each link and render it */}
                                     <div className="w-full flex gap-8 justify-end">
-                                        {item.link.map((link, index) => (
-                                            <Link key={index} href={link} classname="flex justify-end" target="_blank"
+                                        {item.linkText.map((link, index) => (
+                                            <Link key={index} href={link} classname="flex justify-end"
+                                                  target="_blank"
                                                   rel="noopener noreferrer">
                                                 <button
                                                     className="p-2 text-sm md:p-4 md:text-md lg:p-4 lg:text-lg bg-transparent hover:bg-blue-800 text-blue-900 font-semibold hover:text-white py-2 px-4 border border-blue-900 hover:border-transparent rounded">
