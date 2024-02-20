@@ -10,41 +10,41 @@ const items = [
         id: 1,
         color: "from-red-300 to-blue-300",
         title: "Portfolio V1 & V2",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+        desc: "Discover my journey in front-end development through my portfolio.",
         img: "/v1.png",
         link: ["https://v1-portfolio.adrienhecq.com/", "https://adrienhecq.com/","https://github.com/AdrienHq/AdrienHq-Portfolio-V2"],
         linkText: ["Visit the v1", "Github v1", "Github v2" ],
-        linkTech: ["React", "Framer-motion", "Javascript", "Next.js", "Tailwind Css", "Html"],
+        linkTech: ["React", "Framer-motion", "JavaScript", "Next.js", "Tailwind CSS", "HTML", "CSS"],
     },
     {
         id: 2,
         color: "from-blue-300 to-violet-300",
         title: "TrackerHq",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+        desc: "TrackerHQ is an innovative platform designed to empower users to monitor and manage their daily caloric intake effectively. Our intuitive interface enables users to effortlessly create personalized ingredient lists and recipes, streamlining meal planning and tracking. With access to individualized dashboards, users can gain valuable insights into their nutritional journey, tracking progress day by day. TrackerHQ offers a comprehensive solution for individuals committed to optimizing their health and wellness through informed dietary choices.",
         img: "/trackerhq.png",
-        link: ["https://lama.dev"],
+        link: ["https://github.com/AdrienHq/symfony-TrackerHq"],
         linkText: ["Github"],
-        linkTech: ["React", "Javascript"],
+        linkTech: ["Php","Symfony", "HTML", "CSS", "JavaScript", "MySql", "Doctrine", "Twig", "Apache"],
     },
     {
         id: 3,
         color: "from-violet-300 to-purple-300",
-        title: "Recipe and Cooking Website",
+        title: "Recipes Website",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
         img: "/recipes.png",
-        link: ["https://lama.dev"],
+        link: ["https://github.com/AdrienHq/symfony-ecom"],
         linkText: ["Github"],
-        linkTech: ["React", "Javascript"],
+        linkTech: ["Php","Symfony", "React", "HTML", "CSS", "JavaScript", "MySql", "Doctrine", "Apache"],
     },
     {
         id: 4,
         color: "from-purple-300 to-red-300",
-        title: "My Restaurant - Business Website",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+        title: "Business Website",
+        desc: "I've crafted a website aimed at showcasing the exquisite menu and culinary expertise of a renowned restaurant. This project challenged me to master new technologies and significantly expand my proficiency in front-end development. Explore this website in the realm of digital gastronomy.",
         img: "restaurant.png",
-        link: ["https://www.restaurant.adrienhecq.com/"],
+        link: ["https://www.restaurant.adrienhecq.com/", "https://github.com/AdrienHq/FrontEndLearningProject"],
         linkText: ["Visit the Restaurant", "Github"],
-        linkTech: ["Html", "Css"],
+        linkTech: ["HTML", "CSS"],
     },
 ];
 const ProjectsPage = () => {
@@ -74,21 +74,21 @@ const ProjectsPage = () => {
                                 key={item.id}
                             >
                                 <div className="flex flex-col gap-8 text-white">
-                                    <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">
+                                    <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl text-black">
                                         {item.title}
                                     </h1>
                                     <div
                                         className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[900px] xl:h-[420px]">
                                         <Image src={item.img} alt="" fill/>
                                     </div>
-                                    <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
+                                    <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[900px] text-black">
                                         {item.desc}
                                     </p>
                                     {/* Iterate over each link and render it */}
                                     <ul className="flex flex-col sm:flex-row">
                                         {item.linkTech.map((link, index) => (
                                             <li key={index}
-                                                className="flex items-center rounded-full p-2 text-sm md:p-4 md:text-md lg:p-2 bg-indigo-400 text-white py-2 px-4 mr-2 mb-2">
+                                                className="flex items-center rounded-full p-2 text-sm md:p-4 md:text-md lg:p-2 bg-blue-300 text-black py-2 px-4 mr-2 mb-2">
                                                 {item.linkTech[index]}
                                             </li>
                                         ))}
