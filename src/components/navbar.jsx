@@ -86,9 +86,12 @@ const Navbar = () => {
                 <Link href="https://www.linkedin.com/in/adrienhecq/">
                     <Image src="/linkedin.png" alt="Linkedin Image" width={24} height={24}/>
                 </Link>
+                <Link href="/cv%20Hecq%20Adrien.pdf" download="cv%20Hecq%20Adrien">
+                    <span className="text-sm">My résumé</span>
+                </Link>
             </div>
             <div className="md:hidden">
-                <button className="w-10 h-8 flex flex-col justify-between z-50 relative"
+            <button className="w-10 h-8 flex flex-col justify-between z-50 relative"
                         onClick={(() => setOpen(!open))}>
                     <motion.div
                         variants={topVariants}
