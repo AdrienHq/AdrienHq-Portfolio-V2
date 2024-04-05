@@ -8,39 +8,39 @@ import {useRef} from "react";
 const items = [
     {
         id: 1,
-        color: "from-red-300 to-blue-300",
-        title: "Portfolio V1 & V2",
-        desc: "Discover my journey in front-end development through my portfolio.",
-        img: "/v1.png",
-        link: ["https://v1-portfolio.adrienhecq.com/", "https://adrienhecq.com/","https://github.com/AdrienHq/AdrienHq-Portfolio-V2"],
-        linkText: ["Visit the v1", "Github v1", "Github v2" ],
-        linkTech: ["React", "Framer-motion", "JavaScript", "Next.js", "Tailwind CSS", "HTML", "CSS"],
+        color: "from-violet-300 to-purple-300",
+        title: "ADHD Kitchen - Symfony",
+        desc: "This is my cooking website. I use it to store my favorite recipes, but mostly to experiment with new features in development languages.",
+        img: "/adhdkitchen.png",
+        link: ["https://github.com/AdrienHq/symfony-kitchen"],
+        linkText: ["Github"],
+        linkTech: ["Php", "Symfony", "Api Platform", "RESTApi", "Doctrine", "Twig", "React", "HTML", "CSS", "JavaScript", "MySql", "Apache"],
     },
     {
         id: 2,
         color: "from-blue-300 to-violet-300",
-        title: "TrackerHq",
-        desc: "TrackerHQ is an innovative platform designed to empower users to monitor and manage their daily caloric intake effectively. Our intuitive interface enables users to effortlessly create personalized ingredient lists and recipes, streamlining meal planning and tracking. With access to individualized dashboards, users can gain valuable insights into their nutritional journey, tracking progress day by day. TrackerHQ offers a comprehensive solution for individuals committed to optimizing their health and wellness through informed dietary choices.",
+        title: "Blog - React",
+        desc: "This is my blog where I talk about nothing & everything. It was mostly aimed for me to learn how to use react",
         img: "/trackerhq.png",
-        link: ["https://github.com/AdrienHq/symfony-TrackerHq"],
+        link: ["https://github.com/AdrienHq/react-blog"],
         linkText: ["Github"],
-        linkTech: ["Php","Symfony", "HTML", "CSS", "JavaScript", "MySql", "Doctrine", "Twig", "Apache"],
+        linkTech: ["React", "NextJS", "Prisma", "Tailwind CSS"],
     },
     {
         id: 3,
-        color: "from-violet-300 to-purple-300",
-        title: "Recipes Website",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-        img: "/recipes.png",
-        link: ["https://github.com/AdrienHq/symfony-ecom"],
-        linkText: ["Github"],
-        linkTech: ["Php","Symfony", "React", "HTML", "CSS", "JavaScript", "MySql", "Doctrine", "Apache"],
+        color: "from-red-300 to-blue-300",
+        title: "Portfolio V1 & V2",
+        desc: "Discover my journey in front-end development through my portfolio.",
+        img: "/v1.png",
+        link: ["https://v1-portfolio.adrienhecq.com/", "https://github.com/AdrienHq/AdrienHq-Portfolio-V1", "https://github.com/AdrienHq/AdrienHq-Portfolio-V2"],
+        linkText: ["Visit the v1", "Github v1", "Github v2"],
+        linkTech: ["React", "Framer-motion", "JavaScript", "Next.js", "Tailwind CSS", "HTML", "CSS"],
     },
     {
         id: 4,
         color: "from-purple-300 to-red-300",
         title: "Business Website",
-        desc: "I've crafted a website aimed at showcasing the exquisite menu and culinary expertise of a renowned restaurant. This project challenged me to master new technologies and significantly expand my proficiency in front-end development. Explore this website in the realm of digital gastronomy.",
+        desc: "I've crafted a website aimed at showcasing the menu and culinary expertise of a renowned restaurant. This project challenged me to master new technologies and significantly expand my proficiency in front-end development.",
         img: "restaurant.png",
         link: ["https://www.restaurant.adrienhecq.com/", "https://github.com/AdrienHq/FrontEndLearningProject"],
         linkText: ["Visit the Restaurant", "Github"],
@@ -97,8 +97,8 @@ const ProjectsPage = () => {
                                     <div className="w-full flex gap-8 justify-end">
                                         {item.linkText.map((link, index) => (
                                             <a key={index} href={item.link[index]} classname="flex justify-end"
-                                                  target="_blank"
-                                                  rel="noopener noreferrer">
+                                               target="_blank"
+                                               rel="noopener noreferrer">
                                                 <button
                                                     className="p-2 text-sm md:p-4 md:text-md lg:p-4 lg:text-lg bg-transparent hover:bg-blue-800 text-blue-900 font-semibold hover:text-white py-2 px-4 border border-blue-900 hover:border-transparent rounded">
                                                     {item.linkText[index]}
