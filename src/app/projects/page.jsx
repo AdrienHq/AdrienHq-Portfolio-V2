@@ -21,7 +21,7 @@ const items = [
         color: "from-blue-300 to-violet-300",
         title: "Blog - React",
         desc: "This is my blog where I talk about nothing & everything. It was mostly aimed for me to learn how to use react",
-        img: "/trackerhq.png",
+        img: "/blog.png",
         link: ["https://github.com/AdrienHq/react-blog"],
         linkText: ["Github"],
         linkTech: ["React", "NextJS", "Prisma", "Tailwind CSS"],
