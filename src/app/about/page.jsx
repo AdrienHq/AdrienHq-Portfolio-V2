@@ -60,9 +60,8 @@ const AboutPage = () => {
                             <div className="flex justify-between h-70">
                                 {/*    LEFT*/}
                                 <div className="w-1/3">
-                                    <div className="bg-white p-2 font-semibold rounded-b-lg rounded-s-lg">Internship
-                                        Back-End
-                                        Developper
+                                    <div className="bg-white p-2 font-semibold rounded-b-lg rounded-s-lg">
+                                        Internship Symfony Developer
                                     </div>
                                     <div className="p-3 text-medium italic w-full">I opted for an internship at Smals, a
                                         valuable learning experience. Assigned to test Elasticms bundles, the custom
@@ -100,7 +99,7 @@ const AboutPage = () => {
                                 {/*    RIGHT*/}
                                 <div className="w-1/3">
                                     <div className="bg-white p-3 font-semibold rounded-b-lg rounded-e-lg">Back-End
-                                        Developper Symfony
+                                        Developer Symfony
                                     </div>
                                     <div className="p-3 text-medium italic">Following my internship, Smals appointed me
                                         as a PHP/Symfony Back-end Developer. I collaborated with numerous clients,
@@ -117,8 +116,8 @@ const AboutPage = () => {
                             <div className="flex justify-between h-70">
                                 {/*    LEFT*/}
                                 <div className="w-1/3">
-                                    <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">Back-End
-                                        Developper Symfony
+                                    <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                                        Php Developer
                                     </div>
                                     <div className="p-3 text-medium italic">
                                         Continuing my career, I joined the scale-up Stellar, driven by a passion for
